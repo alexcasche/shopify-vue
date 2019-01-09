@@ -16,6 +16,12 @@ function getEntries(pattern) {
 
 const webpackJS = {
   mode: "production",
+  resolve: {
+    alias: {
+      "@scripts": path.resolve(__dirname, "src/vue"),
+      "@vue": path.resolve(__dirname, "src/vue")
+    }
+  },
   entry: getEntries("src/scripts/*.js"),
   output: {
     path: path.join(__dirname, "src/assets"),
