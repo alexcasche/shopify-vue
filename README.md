@@ -29,7 +29,7 @@ Run zip command and create new theme in Shopify from theme.zip.
 yarn run zip
 ```
 
-Add a config.yml file with your theme settings.
+Add config.yml with your theme settings.
 
 ```
 development:
@@ -38,6 +38,19 @@ development:
   store: [DEV_SHOP]
   ignore_files:
     - settings_data.json
+```
+
+Update browserSync.js with your Shopify info
+
+```
+const browserSync = require("browser-sync");
+const BASE_URL = "[DEV_SHOP]";
+const PREVIEW_QUERY = "?preview_theme_id=[DEV_THEME]";
+
+browserSync({
+  proxy: `${BASE_URL}${PREVIEW_QUERY}`,
+  files: "browserUpdate.js"
+});
 ```
 
 Run start command and local changes will be pushed.
