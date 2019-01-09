@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="{{ shop.locale }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <title>{{ shop.name }}</title>
+
+  <!--------- Global Styles --------->
+  {{ 'index.css' | asset_url | stylesheet_tag }}
+  <!--------- Global Fonts --------->
+  {{ 'fonts.css' | asset_url | stylesheet_tag }}
+
+  <meta name="description" content="">
+
+  {{ content_for_header }}
+</head>
+
+<body>
+
+  <vue-example external-prop="Hello from Shopify!"></vue-example>
+  {{ content_for_layout }}
+
+  <!--------- Global Scripts --------->
+  {{ 'index.js' | asset_url | script_tag }}
+</body>
+</html>
