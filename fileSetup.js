@@ -4,6 +4,7 @@ const folders = [
   "config",
   "layout",
   "locales",
+  "sections",
   "snippets",
   "templates"
 ];
