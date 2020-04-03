@@ -13,7 +13,7 @@ const vuexStore = new Vuex.Store(store);
 
 /* Register Filters */
 Object.entries(filters).forEach(filter => {
-  Vue.use(...filter);
+  Vue.filter(...filter);
 });
 
 /* Register Plugins */
